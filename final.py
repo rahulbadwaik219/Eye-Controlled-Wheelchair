@@ -6,9 +6,11 @@ import dlib
 from math import hypot
 from datetime import datetime
 import time
-
-cap = cv2.VideoCapture(0)
-
+for i in range 2:
+    if cv2.VideoCapture(i)is not None:
+        cap=cv2.VideoCapture(i)
+#cap = cv2.VideoCapture(0)
+#scans for any camera available
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
 #capture=None
